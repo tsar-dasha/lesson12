@@ -1,12 +1,24 @@
 package tests;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.FormFillPage;
+import helpers.Attach;
 
 public class FormFillPageObjectsTests extends TestBase {
     FormFillPage fillForm = new FormFillPage();
     TestData testData = new TestData();
+
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+
+    }
+
 
     @Test
     @Tag ("fill_form")
