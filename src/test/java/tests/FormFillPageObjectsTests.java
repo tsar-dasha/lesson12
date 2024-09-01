@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.FormFillPage;
 
@@ -8,6 +9,7 @@ public class FormFillPageObjectsTests extends TestBase {
     TestData testData = new TestData();
 
     @Test
+    @Tag ("fill_form")
     void fillFormTest() {
         fillForm.openPage()
                 .removeBanner()
@@ -23,6 +25,7 @@ public class FormFillPageObjectsTests extends TestBase {
 
 
     @Test
+    @Tag ("fill_all")
     void fillAllFormTest() {
         fillForm.openPage()
                 .removeBanner()
@@ -52,6 +55,7 @@ public class FormFillPageObjectsTests extends TestBase {
     }
 
     @Test
+    @Tag ("fill_negative")
     void fillFormNegativeTest() {
         fillForm.openPage()
                 .removeBanner()

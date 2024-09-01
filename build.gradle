@@ -51,26 +51,25 @@ tasks.withType(Test) {
 }
 
 
-task simple_test(type: Test) {
+task fill_form(type: Test) {
     useJUnitPlatform{
-        includeTags("simple")
+        includeTags("fill_form")
     }
 }
 
-task remote_test(type: Test) {
+task fill_all(type: Test) {
     useJUnitPlatform{
-        includeTags("remote")
+        includeTags("fill_all")
+    }
+}
+task fill_negative(type: Test) {
+    useJUnitPlatform {
+        includeTags("fill_negative")
     }
 }
 
 task property_test(type: Test) {
     useJUnitPlatform{
         includeTags("property")
-    }
-}
-
-task hello_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("hello")
     }
 }
